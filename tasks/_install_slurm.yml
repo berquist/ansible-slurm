@@ -2,7 +2,7 @@
 
 - name: Download and unarchive Slurm 
   unarchive: 
-    src: {{ __slurm_download_url}}
+    src: '{{ __slurm_download_url}}'
     dest: /tmp/slurm
     remote_src: True
 
