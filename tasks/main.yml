@@ -1,4 +1,6 @@
 ---
+- name: Include installation tasks
+  include_tasks: _install_slurm.yml
 
 - name: Include user creation tasks
   include_tasks: user.yml
