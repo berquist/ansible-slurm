@@ -12,7 +12,7 @@ slurm_create_dirs: "{{ __slurm_redhat }}"
 slurm_rotate_logs: "{{ __slurm_redhat }}"
 slurm_configure_munge: yes
 
-# Service names are the same on both distros since ??
+# Service names are the same on all distros
 slurmd_service_name: slurmd
 slurmctld_service_name: slurmctld
 slurmdbd_service_name: slurmdbd
@@ -66,7 +66,7 @@ __slurm_debian_packages:
   slurmdbd: [slurmdbd]
 
 __slurm_redhat_packages:
-  client: [slurm, munge]
+  client: [munge, slurm]
   slurmctld: [munge, slurm, slurm-slurmctld]
   slurmd: [munge, slurm, slurm-slurmd]
   slurmdbd: [munge, slurm-slurmdbd]
