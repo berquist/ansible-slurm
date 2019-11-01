@@ -1,0 +1,11 @@
+---
+
+- name: Download and unarchive Slurm 
+  unarchive: 
+    src: '{{ __slurm_download_url}}'
+    dest: /tmp/slurm
+    remote_src: True
+
+- name: Install slurm
+  script: /files/install_slurm.sh /tmp/slurm
+

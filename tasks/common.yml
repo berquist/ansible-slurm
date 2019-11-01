@@ -1,9 +1,9 @@
 ---
 
 - name: Install Slurm client
-  package:
-    name: "{{ __slurm_packages.client }}"
-    state: "{{ 'latest' if slurm_upgrade else 'present' }}"
+  get_url: 
+    url: {{ __slurm_download_url}}
+    dest: /tmp/slurm
 
 - name: Include config dir creation tasks
   include_tasks: _inc_create_config_dir.yml

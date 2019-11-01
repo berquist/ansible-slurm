@@ -24,6 +24,8 @@ __slurm_group_name: "{{ (slurm_user | default({})).group | default(omit) }}"
 __slurm_debian: "{{ ansible_os_family == 'Debian' }}"
 __slurm_redhat: "{{ ansible_os_family == 'RedHat' }}"
 
+__slurm_download_url:  https://download.schedmd.com/slurm/slurm-19.05.0.tar.bz2
+
 __slurm_config_default:
   AuthType: auth/munge
   CryptoType: crypto/munge
