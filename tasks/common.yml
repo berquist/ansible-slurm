@@ -2,7 +2,7 @@
 
 - name: Install Slurm client
   get_url: 
-    url: {{ __slurm_download_url}}
+    url: "{{ __slurm_download_url }}"
     dest: /tmp/slurm
 
 - name: Include config dir creation tasks
